@@ -1,0 +1,31 @@
+{"prompt": "List all files including hidden ones in a directory", "completion": "ls -la"}
+{"prompt": "Create a new directory named 'backup'", "completion": "mkdir backup"}
+{"prompt": "Move all .txt files to the 'docs' folder", "completion": "mv *.txt docs/"}
+{"prompt": "Search for the word 'ERROR' in all .log files recursively", "completion": "grep -r 'ERROR' *.log"}
+{"prompt": "Write a Bash script to check if a file exists", "completion": "if [ -f filename ]; then echo 'File exists'; fi"}
+{"prompt": "Schedule a cron job to run a script every day at 2am", "completion": "0 2 * * * /path/to/script.sh"}
+{"prompt": "Download a file from a URL using bash", "completion": "curl -O https://example.com/file.txt"}
+{"prompt": "Extract a .tar.gz archive", "completion": "tar -xzvf archive.tar.gz"}
+{"prompt": "Get the number of lines in a file", "completion": "wc -l filename.txt"}
+{"prompt": "Loop through all files in a directory and print their names", "completion": "for file in *; do echo \"$file\"; done"}
+{"prompt": "Replace all 'foo' with 'bar' in a file using sed", "completion": "sed -i 's/foo/bar/g' filename.txt"}
+{"prompt": "Print the current working directory", "completion": "pwd"}
+{"prompt": "Write a Bash function that says hello to a user", "completion": "greet() { echo \"Hello, $1!\"; }"}
+{"prompt": "Display disk usage in human-readable format", "completion": "df -h"}
+{"prompt": "Find all .sh files and make them executable", "completion": "find . -name '*.sh' -exec chmod +x {} \\;"}
+{"prompt": "Write a bash script to backup the /var/log directory to /backup with a timestamped archive", "completion": "tar -czf /backup/logs_$(date +%F_%T).tar.gz /var/log"}
+{"prompt": "Create a bash script that checks if nginx is running, and restarts it if not", "completion": "if ! pgrep nginx > /dev/null; then systemctl restart nginx; fi"}
+{"prompt": "Write a bash script that finds the 5 largest files in the /home directory", "completion": "find /home -type f -exec du -h {} + | sort -rh | head -n 5"}
+{"prompt": "Write a bash script that monitors CPU usage and logs to /tmp/cpu.log every minute", "completion": "while true; do top -bn1 | grep 'Cpu(s)' >> /tmp/cpu.log; sleep 60; done"}
+{"prompt": "Write a bash script to extract lines containing 'error' from all .log files and save to errors.txt", "completion": "grep -i 'error' *.log > errors.txt"}
+{"prompt": "Write a bash script that renames all .txt files to .md", "completion": "for file in *.txt; do mv \"$file\" \"${file%.txt}.md\"; done"}
+{"prompt": "Create a bash script that checks disk space and emails admin if usage exceeds 90%", "completion": "df -H | awk '{ if($5+0 > 90) print $0 }' | mail -s 'Disk Alert' admin@example.com"}
+{"prompt": "Create a script that parses a CSV file and prints the second column", "completion": "awk -F, '{ print $2 }' file.csv"}
+{"prompt": "Write a bash script to count total number of active SSH connections", "completion": "who | grep 'ssh' | wc -l"}
+{"prompt": "Write a bash script that loops through all users and prints their home directory size", "completion": "for user in /home/*; do du -sh \"$user\"; done"}
+{"prompt": "Create a bash script that runs 'uptime' every 5 seconds and logs it with timestamp", "completion": "while true; do echo \"$(date): $(uptime)\" >> /tmp/uptime.log; sleep 5; done"}
+{"prompt": "Write a bash script to find and delete files older than 30 days in /tmp", "completion": "find /tmp -type f -mtime +30 -delete"}
+{"prompt": "Create a script to ping google.com every 10 seconds and log failures", "completion": "while true; do ping -c1 google.com > /dev/null || echo \"Failed at $(date)\" >> ping.log; sleep 10; done"}
+{"prompt": "Write a bash script that extracts email addresses from a file", "completion": "grep -E -o \"[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}\" file.txt"}
+{"prompt": "Create a bash script that compresses all files in current directory except *.jpg", "completion": "tar --exclude='*.jpg' -czf archive.tar.gz *"}
+
